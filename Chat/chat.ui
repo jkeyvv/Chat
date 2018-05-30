@@ -6,24 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1333</width>
+    <width>1323</width>
     <height>839</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Chat</string>
   </property>
-  <widget class="QPushButton" name="send">
+  <widget class="QPushButton" name="start">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>790</y>
-     <width>121</width>
-     <height>41</height>
+     <x>70</x>
+     <y>770</y>
+     <width>111</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>send</string>
+    <string>Start</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -37,19 +46,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="recv">
-   <property name="geometry">
-    <rect>
-     <x>700</x>
-     <y>790</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>recv</string>
    </property>
   </widget>
  </widget>

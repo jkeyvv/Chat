@@ -24,11 +24,10 @@ void SendAudio::run()
 	AVFrame *frameTmp = av_frame_alloc();
 	AVPacket *packet = av_packet_alloc();
 	AVPacket *packetAAC = av_packet_alloc();
+	AVFormatContext *formatCtx = avformat_alloc_context();
 
 	AVInputFormat *ifmt = av_find_input_format("dshow");
-	AVFormatContext *formatCtx = avformat_alloc_context();
-	avformat_open_input(&formatCtx, u8"audio=Âó¿Ë·ç (Realtek High Definition Audio)", ifmt, NULL);
-
+	avformat_open_input(&formatCtx, AUDIO_INPUT_DEVICE, ifmt, NULL);
 	AVCodec *decode = avcodec_find_decoder(formatCtx->streams[0]->codecpar->codec_id);
 	AVCodecContext *decodeCtx = avcodec_alloc_context3(decode);
 	avcodec_parameters_to_context(decodeCtx, formatCtx->streams[0]->codecpar);

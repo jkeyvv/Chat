@@ -10,13 +10,11 @@ Chat::Chat(QWidget *parent)
 	SendAudio *sendAudio = new SendAudio;
 	RecvAudio *recvAudio = new RecvAudio;
 
-	connect(ui.send, &QPushButton::clicked, sendVideo, &SendVideo::StartSend);
-	connect(ui.send, &QPushButton::clicked, sendAudio, &SendAudio::StartSend);
-
-	connect(ui.recv, &QPushButton::clicked, this, &Chat::OpenAudioDevice);
-
-	connect(ui.recv, &QPushButton::clicked, recvVideo, &RecvVideo::StartRecv);
-	connect(ui.recv, &QPushButton::clicked, recvAudio, &RecvAudio::StartRecv);
+	connect(ui.start, &QPushButton::clicked, this, &Chat::OpenAudioDevice);
+	connect(ui.start, &QPushButton::clicked, sendVideo, &SendVideo::StartSend);
+	connect(ui.start, &QPushButton::clicked, sendAudio, &SendAudio::StartSend);
+	connect(ui.start, &QPushButton::clicked, recvVideo, &RecvVideo::StartRecv);
+	connect(ui.start, &QPushButton::clicked, recvAudio, &RecvAudio::StartRecv);
 
 	connect(recvVideo, &RecvVideo::VideoReady, this, &Chat::HandleVideo);
 	connect(recvAudio, &RecvAudio::AudioReady, this, &Chat::HandleAudio);

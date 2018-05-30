@@ -83,8 +83,8 @@ void SendVideo::run()
 	AVFrame *frame = av_frame_alloc();
 	AVPacket *packet = av_packet_alloc();
 	AVPacket *packetH264 = av_packet_alloc();
-
 	AVFormatContext *formatCtx = avformat_alloc_context();
+
 	AVInputFormat *ifmt = av_find_input_format("dshow");
 	avformat_open_input(&formatCtx, VIDEO_INPUT_DEVICE, ifmt, NULL);
 

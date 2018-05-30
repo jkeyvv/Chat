@@ -28,7 +28,7 @@
 #define FRAME_BUF_SIZE_VIDEO	100000
 #define FRAME_BUF_SIZE_AUDIO	1024
 #define VIDEO_INPUT_DEVICE		u8"video=BisonCam, NB Pro"
-#define AUDIO_INPUT_DEVICE		u8"audio=麦克风 (High Definition Audio 设备)"
+#define AUDIO_INPUT_DEVICE		u8"audio=麦克风 (Realtek High Definition Audio)"
 
 extern "C"
 {
